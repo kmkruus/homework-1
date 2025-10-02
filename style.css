@@ -1,0 +1,32 @@
+body {
+    font-family: sans-serif;
+
+
+}
+
+.top {
+    display: flex;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    background: #bfbfbf;
+    border-radius: 2vh;
+}
+.top a {
+    text-decoration: none;
+    color: black;
+}
+
+.push {
+    margin-left: auto;
+    display: flex;
+    align-items: stretch;
+}
+.push img {
+    height: 1em;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+
