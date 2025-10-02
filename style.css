@@ -52,11 +52,9 @@ header {
  }
 
 .feed {
-  margin: auto;
+    padding: 10px;
   width: 50%;
-  padding: 10px;
-  height: 2000000px;    
-  padding-top: 75px;
+  height: 2000000px;
   border: green solid;
 }
 
@@ -85,4 +83,22 @@ footer {
     background: #bfbfbf;
     border-radius: 2vh;
     
+}
+
+.adSpace {
+    width: 25%;
+    padding: 10px;
+    height: 100%;
+    box-sizing: border-box;
+    background: #bfbfbf;
+    border-radius: 2vh;
+}
+
+.feedMain div {
+}
+
+.feedMain {    
+  display: flex;
+  padding-top: 75px;
+  margin: auto;
 }
