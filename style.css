@@ -44,56 +44,17 @@ header {
     display: block;
 }
  h1 {
-     font-size: 4vh;
      text-align: center;
  }
 
  .sinine {
-     font-size: 4vh;
-     color: steelblue;
- }
-
- .sisselogimine {
-     text-align: center;
- ;
- }
- .keskosa {
-     align-items: center;
-     padding: 1vw;
-     margin: auto;
-     width: 50%;
-     box-sizing: border-box;
-     background: #bfbfbf;
-     border-radius: 2vh;
-
- }
-input[type=text], input[type=password] {
-    width: 20vw;
-    margin-bottom: 0.5vh;
-    border: 1px solid #ccc;
-    padding: 2vh;
-    font-size: 2vh;
-}
-
-input[type=submit] {
-    width: 30%;
-    height: 10%;
-    border: none;
-    color: white;
-    padding: 1vh;
-    background: #133d82;
-    font-size: 2vh;
-}
- .vahe {
-     margin: 7vh auto;
+     color: lightblue;
  }
 
 .feed {
-  margin: auto;
+    padding: 10px;
   width: 50%;
-  padding: 10px;
-  height: 2000000px;    
-  padding-top: 75px;
+  height: 2000000px;
   border: green solid;
 }
 
@@ -122,4 +83,22 @@ footer {
     background: #bfbfbf;
     border-radius: 2vh;
     
+}
+
+.adSpace {
+    width: 25%;
+    padding: 10px;
+    height: 100%;
+    box-sizing: border-box;
+    background: #bfbfbf;
+    border-radius: 2vh;
+}
+
+.feedMain div {
+}
+
+.feedMain {    
+  display: flex;
+  padding-top: 75px;
+  margin: auto;
 }
