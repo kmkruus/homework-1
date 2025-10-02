@@ -12,7 +12,13 @@ body {
     background: #bfbfbf;
     border-radius: 2vh;
 }
-.top a {
+.tekst{
+    display: flex;
+    align-items: center;
+    font-size: 2vw;
+}
+
+.tekst a {
     text-decoration: none;
     color: black;
 }
@@ -23,10 +29,16 @@ body {
     align-items: stretch;
 }
 .push img {
-    height: 1em;
+    height: 3em;
     width: auto;
     object-fit: contain;
     display: block;
 }
+ h1 {
+     text-align: center;
+ }
 
+ .sinine {
+     color: lightblue;
+ }
 
