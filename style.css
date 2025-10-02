@@ -41,11 +41,12 @@ body {
 
  .sinine {
      font-size: 4vh;
-     color: lightblue;
+     color: steelblue;
  }
 
  .sisselogimine {
      text-align: center;
+ ;
  }
  .keskosa {
      align-items: center;
@@ -57,7 +58,24 @@ body {
      border-radius: 2vh;
 
  }
+input[type=text], input[type=password] {
+    width: 20vw;
+    margin-bottom: 0.5vh;
+    border: 1px solid #ccc;
+    padding: 2vh;
+    font-size: 2vh;
+}
+
+input[type=submit] {
+    width: 30%;
+    height: 10%;
+    border: none;
+    color: white;
+    padding: 1vh;
+    background: #133d82;
+    font-size: 2vh;
+}
  .vahe {
-     margin: 5vw auto;
+     margin: 7vh auto;
  }
 
