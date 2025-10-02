@@ -7,20 +7,29 @@
 </head>
 <body>
 <div class = "top">
-    <a href="index.html">Home</a>
+    <div class="tekst">
+        <a href="index.html">Home</a>
+    </div>
     <div class="push">
         <img src="icon.PNG" alt="ikoon">
     </div>
 </div>
-<section>
+<div class = vahe></div>
+<section class = "keskosa">
     <header>
         <h1>Welcome to Postit</h1>
         <h1 class = sinine>Create an account</h1>
         <h1>or</h1>
         <h1>Please log in</h1>
     </header>
-    <form action= "#" method="post">\
-        <input type="text" id="fname" name="" placeholder="">
+    <form class = "sisselogimine" action="index.html" method="post">
+        <input type="text" id="email" name="email" placeholder="Email" required>
+        <br></br>
+        <input type="text" id="username" name="username" placeholder="Username" required>
+        <br></br>
+        <input type="submit" value="Log in">
+    </form>
+    <h1 class = sinine>Forget password</h1>
 </section>
 </body>
 </html>

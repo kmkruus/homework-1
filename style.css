@@ -35,10 +35,29 @@ body {
     display: block;
 }
  h1 {
+     font-size: 4vh;
      text-align: center;
  }
 
  .sinine {
+     font-size: 4vh;
      color: lightblue;
+ }
+
+ .sisselogimine {
+     text-align: center;
+ }
+ .keskosa {
+     align-items: center;
+     padding: 1vw;
+     margin: auto;
+     width: 50%;
+     box-sizing: border-box;
+     background: #bfbfbf;
+     border-radius: 2vh;
+
+ }
+ .vahe {
+     margin: 5vw auto;
  }
 
