@@ -137,3 +137,14 @@ input[type=submit] {
  .vahe {
      margin: 21vh auto;
  }
+
+ h2{
+    align: center;
+    font-size: 2vh;
+ }
+
+ .addPost{
+ display: flex;
+ gap: 2vw;
+ margin-bottom: 2vw;
+ }
