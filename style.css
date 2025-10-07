@@ -2,7 +2,7 @@ body {
     font-family: sans-serif;
 
 }
-
+/*Banner code starts*/
 header {
     display: flex;
     width: 100%;
@@ -35,6 +35,7 @@ header {
 .tekst > a:hover {
     background-color: cornflowerblue;
 }
+/*hovering changes color*/
 
 .push {
     margin-left: auto;
@@ -48,17 +49,9 @@ header {
     display: block;
 }
 
-br + img {
-    height: 20vw;
-}
- h1 {
-     text-align: center;
- }
+/*Banner code ends*/
 
- .sinine {
-     color: steelblue;
- }
-
+/*code for index.html*/
 .feed {
     padding: 10px;
   width: 50%;
@@ -107,10 +100,11 @@ footer {
   margin: auto;
 }
 
- .sisselogimine {
-     text-align: center;
- }
+h3{
+    align: right;
+    font-size: 2vh;}
 
+/*main area of addPost and login*/
  .keskosa {
      align-items: center;
      padding: 2vw;
@@ -121,10 +115,27 @@ footer {
      border-radius: 2vh;
 
  }
+
+.sisselogimine {
+    text-align: center;
+}
+
+br + img {
+    height: 20vw;
+}
+h1 {
+    text-align: center;
+}
+
+.sinine {
+    color: steelblue;
+}
+
  h2 ~ input[type=text] {
      width: 20vw;
      padding-bottom: 180px
  }
+ /*input display needed to change from default*/
 input[type=text], input[type=password] {
     width: 20vw;
     margin-bottom: 0.5vh;
@@ -155,12 +166,12 @@ input[type=submit] {
  #vahe {
      margin: 21vh auto;
  }
-
+/*built-in gap to be used for addPost and login*/
  h2{
     font-size: 3vh;
  }
 
-.Post {
+.addingPost {
     display: flex;
     gap: 2vw;
     justify-content: center;
@@ -171,7 +182,3 @@ input[type=submit] {
      text-align: center;
  }
 
- h3{
-    align: right;
-    font-size: 2vh;
-}
