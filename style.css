@@ -154,6 +154,7 @@ input[type=submit] {
     font-size: 2vh;
 }
 
+
 .label {
     width: 45%;
     height: 10%;
@@ -177,8 +178,18 @@ input[type=submit] {
     justify-content: center;
 }
  .addPost{
-    gap: 2vw;
-    margin-bottom: 2vw;
+     display: flex;
+     justify-content: center;
      text-align: center;
+     text-decoration: none;
+    margin: 0 auto;
+     width: 45%;
+     height: 10%;
+     border: none;
+     color: white;
+     padding: 1vh;
+     background: #133d82;
+     font-size: 2vh;
+
  }
 
