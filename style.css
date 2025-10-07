@@ -56,7 +56,6 @@ br + img {
  }
 
  .sinine {
-     font-size: 4vh;
      color: steelblue;
  }
 
@@ -114,7 +113,7 @@ footer {
 
  .keskosa {
      align-items: center;
-     padding: 1vw;
+     padding: 2vw;
      margin: auto;
      width: 50%;
      box-sizing: border-box;
@@ -135,7 +134,7 @@ input[type=text], input[type=password] {
 }
 
 input[type=submit] {
-    width: 30%;
+    width: 45%;
     height: 10%;
     border: none;
     color: white;
@@ -145,7 +144,7 @@ input[type=submit] {
 }
 
 .label {
-    width: 30%;
+    width: 45%;
     height: 10%;
     color: white;
     padding: 1vh;
@@ -161,9 +160,14 @@ input[type=submit] {
     font-size: 3vh;
  }
 
+.Post {
+    display: flex;
+    gap: 2vw;
+    justify-content: center;
+}
  .addPost{
- gap: 2vw;
- margin-bottom: 2vw;
+    gap: 2vw;
+    margin-bottom: 2vw;
      text-align: center;
  }
 
