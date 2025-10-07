@@ -55,8 +55,6 @@ header {
 .feed {
     padding: 10px;
   width: 50%;
-  height: 2000000px;
-  border: green solid;
 }
 
 .post{
@@ -83,24 +81,22 @@ footer {
     box-sizing: border-box;
     background: #bfbfbf;
     border-radius: 2vh;
-    
+  justify-content: center;
 }
 
 .adSpace {
     width: 25%;
     padding: 10px;
-    height: 100%;
+    height: auto;
     box-sizing: border-box;
     background: #bfbfbf;
     border-radius: 2vh;
 }
 
-.feedMain div {
-}
-
 .feedMain {    
   display: flex;
   padding-top: 75px;
+  padding-bottom: 75px;
   margin: auto;
 }
 
@@ -151,4 +147,5 @@ input[type=submit] {
 
  h3{
     align: right;
-    font-size: 2vh;}
+    font-size: 2vh;
+}
