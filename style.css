@@ -162,9 +162,9 @@ input[type=submit] {
  }
 
  .addPost{
- display: flex;
  gap: 2vw;
  margin-bottom: 2vw;
+     text-align: center;
  }
 
  h3{
