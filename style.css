@@ -148,3 +148,7 @@ input[type=submit] {
  gap: 2vw;
  margin-bottom: 2vw;
  }
+
+ h3{
+    align: right;
+    font-size: 2vh;}
