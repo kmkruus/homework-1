@@ -17,7 +17,7 @@
     </div>
 </header>
 
-<div class = vahe></div>
+<div id = vahe></div>
 <section class = "keskosa">
     <form class = "addPost" action="index.html" method="post">
         <h2> Post body </h2>
@@ -25,7 +25,8 @@
     </form>
     <form class = "addPost" action="index.html" method="post">
         <h2> Select file </h2>
-        <input type="file">
+        <input type="file" style = display:none id = "file">
+        <label for="file" class = "label">Choose File</label>
     </form>
     <form class = "addPost" action="index.html" method="post">
         <input type="submit" value="Create post">

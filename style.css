@@ -32,6 +32,10 @@ header {
     color: black;
 }
 
+.tekst > a:hover {
+    background-color: cornflowerblue;
+}
+
 .push {
     margin-left: auto;
     display: flex;
@@ -42,6 +46,10 @@ header {
     width: auto;
     object-fit: contain;
     display: block;
+}
+
+br + img {
+    height: 20vw;
 }
  h1 {
      text-align: center;
@@ -103,6 +111,7 @@ footer {
  .sisselogimine {
      text-align: center;
  }
+
  .keskosa {
      align-items: center;
      padding: 1vw;
@@ -112,6 +121,10 @@ footer {
      background: #bfbfbf;
      border-radius: 2vh;
 
+ }
+ h2 ~ input[type=text] {
+     width: 20vw;
+     padding-bottom: 180px
  }
 input[type=text], input[type=password] {
     width: 20vw;
@@ -130,13 +143,22 @@ input[type=submit] {
     background: #133d82;
     font-size: 2vh;
 }
- .vahe {
+
+.label {
+    width: 30%;
+    height: 10%;
+    color: white;
+    padding: 1vh;
+    background: gray;
+    border: solid dimgray;
+    font-size: 2vh;
+}
+ #vahe {
      margin: 21vh auto;
  }
 
  h2{
-    align: center;
-    font-size: 2vh;
+    font-size: 3vh;
  }
 
  .addPost{
