@@ -51,6 +51,26 @@ header {
 
 /*Banner code ends*/
 
+/* Dropdown Menu */
+.dropdown_menu {
+    display: none;
+    position: fixed;
+    right: 10px;
+    top: 60px;
+    background-color: white;
+    border-radius: 10px;
+    width: 220px;
+    padding: 10px;
+}
+
+.dropdown_menu a {
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+
+
 /*code for index.html*/
 .feed {
     padding: 10px;
