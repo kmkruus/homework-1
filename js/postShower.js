@@ -4,6 +4,16 @@ var feedEnd = false //keep track of if end of feed has been reached, prevent mul
 function addPostInit() {
     addPostToFeed(); // TODO: add fetching json data and feeding it into here, otherwise will just run on default values
     //TODO: when JSON runs out display a "post" that says end of feed and set feedEnd to True, the end of feed post should have button to set feedEnd to false to attempt loading more posts
+
+    //pseudocode idea
+    //if !feedEnd
+        //try:
+            //get data from json on post where id=currentPost
+            // addPostToFeed with the data
+            //currentPost +=1   //possibly have it iterate down, so newest posts appear at the top
+        //else:
+            //add a div (similar to a post) into the feed with a message that we're out of posts and a button that removes it and sets feedEnd to false (button will need more js)
+            //feedEnd = True
 }
 
 function addPostToFeed(userid, date = "Jan, 1, 1970", image, text = "Lorem Ipsum") { //included default values
@@ -18,7 +28,7 @@ function addPostToFeed(userid, date = "Jan, 1, 1970", image, text = "Lorem Ipsum
     } else {
         userPFP = "icon.png" // TODO: implement a system to get user's pfp from id, also system to check if that pfp exists and otherwise default to the default
     }
-    document.getElementById("feed")
+    document.getElementById("feed") //post design is hardcoded in a really annoying way, surely there's a better way to do it
                 .innerHTML +=
                 `<div class="post">
                     <div class="push">
@@ -46,7 +56,7 @@ window.addEventListener('scroll', () => {
   const scrollPos = window.innerHeight + window.scrollY;
   const feedBottom = feed.offsetTop + feed.offsetHeight;
 
-  // Detect if user is within 200px of bottom, maye tweak a bit
+  // Detect if user is within 200px of bottom, maybe tweak a bit
   if (scrollPos >= feedBottom - 200 && !feedEnd) {
     addPostInit();
   }
