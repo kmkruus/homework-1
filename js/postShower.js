@@ -12,7 +12,7 @@ function addPostInit() {
                 //addPostToFeed(id, date, image, text);
             //});
         //});
-    fetch('https://api.jsonsilo.com/public/a69d1cb6-7edb-431f-af0e-64b3b2c9175d')
+    fetch('js/posts.json')
         .then(response => {
             if (!response.ok) throw new Error(response.status);
             return response.json();
