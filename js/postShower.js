@@ -2,6 +2,26 @@ var currentPost = 0 //keep track of latest added post, TODO: think about replaci
 var feedEnd = false //keep track of if end of feed has been reached, prevent multiple EoF messages from being diplayed
 
 function addPostInit() {
+    //fetch('https://api.jsonsilo.com/public/a69d1cb6-7edb-431f-af0e-64b3b2c9175d')
+        //.then(response => {
+            //if (!response.ok) throw new Error(response.status);
+            //return response.json();
+        //})
+        //.then(data => {
+            //data.posts.forEach(({id, date, image, text}) => {
+                //addPostToFeed(id, date, image, text);
+            //});
+        //});
+    fetch('https://api.jsonsilo.com/public/a69d1cb6-7edb-431f-af0e-64b3b2c9175d')
+        .then(response => {
+            if (!response.ok) throw new Error(response.status);
+            return response.json();
+        })
+        .then(data => {
+            data.posts.forEach(({id, date, image, text}) => {
+                addPostToFeed(id, date, image, text);
+            });
+        });
     addPostToFeed(); // TODO: add fetching json data and feeding it into here, otherwise will just run on default values
     //TODO: when JSON runs out display a "post" that says end of feed and set feedEnd to True, the end of feed post should have button to set feedEnd to false to attempt loading more posts
 
@@ -48,6 +68,7 @@ function addPostToFeed(userid, date = "Jan, 1, 1970", image, text = "Lorem Ipsum
                 <br>`;
 }
 
+addPostInit();
 window.addEventListener('scroll', () => {
   const feed = document.getElementById('feed');
   if (!feed) return;

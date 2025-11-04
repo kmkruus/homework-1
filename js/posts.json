@@ -1,0 +1,59 @@
+{
+    "posts": [
+        {
+            "id": 1,
+            "date": "Oct 20, 2022",
+            "text": "Tartu 2022",
+            "image": "tartu2024.jpg"
+        },
+        {
+            "id": 2,
+            "date": "Oct 20, 2022",
+            "text": "Does anyone know what room the lab is in today?"
+        },
+        {
+            "id": 3,
+            "date": "Oct 3, 2022",
+            "text": "New profile pic time!!!!!!",
+            "image": "icon.PNG"
+        },
+        {
+            "id": 4,
+            "date": "Oct 4, 2022",
+            "text": "hey user7451652462579, look user145624892642594 updated their profile pic, they look so foolish",
+            "image": "icon.png"
+        },
+        {
+            "id": 5,
+            "date": "Oct 6, 2022",
+            "text": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos. Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos. Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos. Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos. Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos."
+        },
+        {
+            "id": 6,
+            "date": "Oct 7, 2022",
+            "text": "What a nice day in Tartu :D",
+            "image": "tartu2024.jpg"
+        },
+        {
+            "id": 7,
+            "date": "Oct 8, 2022",
+            "text": "Hey, @user197719801983, what are your thoughts about the new movie?"
+        },
+        {
+            "id": 8,
+            "date": "Oct 9, 2022",
+            "text": "A bigger thumbs up is always better",
+            "image": "thumbsup.png"
+        },
+        {
+            "id": 9,
+            "date": "Oct 9, 2022",
+            "text": "My axolotl is such a goofball, playing with that yellow triangle of his"
+        },
+        {
+            "id": 10,
+            "date": "Oct 10, 2022",
+            "text": "I made lasagna today, didn't take a picture, though :("
+        }
+    ]
+}
