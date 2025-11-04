@@ -44,9 +44,9 @@ function addPostToFeed(userid, date = "Jan, 1, 1970", image, text = "Lorem Ipsum
                     <img src="images/` + image + `" alt="postAttachment">`
     }
     if(userid = undefined) {
-        userPFP = "icon.png"
+        userPFP = "icon.PNG"
     } else {
-        userPFP = "icon.png" // TODO: implement a system to get user's pfp from id, also system to check if that pfp exists and otherwise default to the default
+        userPFP = "icon.PNG" // TODO: implement a system to get user's pfp from id, also system to check if that pfp exists and otherwise default to the default
     }
     document.getElementById("feed") //post design is hardcoded in a really annoying way, surely there's a better way to do it
                 .innerHTML +=
