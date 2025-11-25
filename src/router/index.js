@@ -1,6 +1,6 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import MainView from "../views/MainView.vue";
-import FormView from "../views/FormView.vue";
+import LoginView from "../views/LoginView.vue";
 import FetchView from "../views/FetchView.vue";
 import FAQView from "../views/FAQView.vue";
 
@@ -10,9 +10,9 @@ const routes = [{
         component: MainView,
     },
     {
-        path: "/form",
-        name: "form",
-        component: FormView,
+        path: "/login",
+        name: "login",
+        component: LoginView,
     },
     {
         path: "/fetch",
