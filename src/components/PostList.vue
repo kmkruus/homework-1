@@ -5,15 +5,15 @@
 
     <!-- User PFP -->
     <div class="push">
-      <img src="../../images/icon.png" alt="pfp">
+      <img src="/images/icon.png" alt="pfp">
     </div>
 
     <!-- Date -->
     <h3>{{ post.date }}</h3>
 
     <!-- Optional Image -->
-    <div v-if="post.image">
-      <img :src="'../../images/' + post.image" alt="postAttachment">
+    <div class="push" v-if="post.image">
+      <img :src="'/images/' + post.image" alt="postAttachment">
     </div>
 
     <!-- Text -->
@@ -21,7 +21,7 @@
 
     <!-- Like Button -->
     <div class="push like" @click="post.likes++">
-      <img src="../../images/thumbsup.png" alt="likeButton">
+      <img src="/images/thumbsup.png" alt="likeButton">
       <span>{{ post.likes }}</span>
     </div>
     </div> 
@@ -99,6 +99,18 @@ export default {
     object-fit: contain;
     display: block;
 }
+.push img {
+    height: 3em;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+br + img {
+    height: 20vw;
+}
 
+.attachement{
+  max-width:99%;
+}
 </style>
 
