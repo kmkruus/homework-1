@@ -1,16 +1,6 @@
 <template>
 
 <div class="main">
-
-<h1>This is a to do list page</h1>
-  <form>
-    <input type="text" placeholder="Enter a task to be done" v-model="taskDesc"/>
-    <!-- ".prevent" is used to prevent reloading the page when the button is clicked-->
-    <!-- :disabled="!taskDesc" to disable the "Add Task" button if there is no text entered -->
-    <button class="add-task" @click.prevent="addTask" :disabled="!taskDesc">Add task</button>
-    <!-- :v-if="tasks.length > 1" is used to control the visibility of this button, i.e., it will appear when there is more than one task -->
-    <button class="delete-all-tasks" v-if="tasks.length > 1" @click.prevent="deleteAll">Delete all</button>
-  </form>
   
     <!-- 
     The v-for directive requires a special syntax in the form of "item" in "items", 
@@ -36,6 +26,9 @@
     <div class="task-box">{{ task.desc }}</div>
     <div class="like" @click="task.likes = task.likes + 1">Like {{ task.likes }}</div>
     </div> 
+  <form>
+    <button class="delete-all-tasks" @click.prevent="deleteAll">Clear all likes</button>
+  </form>
     
 </div>
 
@@ -70,7 +63,9 @@ methods: {
     },
     /* Empty the list (array) of the to do list  */
     deleteAll: function() {
-      this.tasks = [];
+      this.tasks.forEach(task => {
+    task.likes = 0;
+  });
     }
   }  
 
@@ -95,6 +90,8 @@ h1{
 }
 .main {
   text-align: center;
+  padding-top: 75px;
+  padding-bottom: 75px;
 }
 .main form {
   margin: 20px auto 10px;
@@ -178,6 +175,7 @@ h1{
 .main .tasks-list .like:hover {
     background-color: #6e1812;
 }
+
 
 
 </style>
