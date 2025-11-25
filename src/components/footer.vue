@@ -1,7 +1,7 @@
 <template>
 <footer>
     <div class = "bottom">
-        <h3> FOOTER </h3>
+        <h3> Group AE </h3>
     </div>
 </footer>
 </template>
