@@ -6,8 +6,13 @@
   <label for="email">Email</label>
   <input type="email" required v-model="email">
   <label for="password">Password</label>
-  <input type="password" required v-model="password">
-  <div v-if="validatePassword" class="error"> {{validatePassword}}</div>
+  <input type="password" required v-model="password" @input = "validateForm">
+
+ <ul v-if="passwordErrors.length">
+        <li v-for="(err, index) in passwordErrors" :key="index" class="error">
+          {{ err }}
+        </li>
+      </ul>
 
 <label for="role">Role</label>
 <select v-model="role">
@@ -42,20 +47,33 @@ data: function() {
    password: '',
    role: '',
    terms: false,
-   validatePassword:'',
+   passwordErrors: [],
   }},
   methods: {
    /* Validate password */
    validateForm(){
-   console.log('signup is submitted');
-   this.validatePassword = (this.password.length <8 || this.password> 15)? 'password must be between 8-15 chars':''
-   console.log(this.validatePassword);
-   let regex = /[a-z]+[A-Z]+[0-9]+_+/
-   console.log(regex.test(this.password));
-   console.log(this.password);
-   this.validatePassword = regex.test(this.password)? '':'password must contain a combination of Uppercase characters (A-Z), Lowercase characters (a-z), Digits (0-9), and _'
-   }
+    const password = this.password;
+    let errorList = [];
+    this.passwordErrors = [];
+    if(!/(?=.*[a-z]{2})/.test(password)){
+        errorList.push("The password must contain at least two lowercase letters.");}
+    if (!/^[A-Z]/.test(password)) {
+        errorList.push("The first letter of the password must be an uppercase letter.");}
+    if(!/(?=.*[A-Z])/.test(password)){
+        errorList.push("The password must contain at least one uppercase letter.");}
+    if(!/(?=.*\d)/.test(password)){
+        errorList.push("The password must contain at least one number.");}
+    if(!/(?=.*_)/.test(password)){
+        errorList.push("The password must contain at least one instance of the character _");}
+    if(!/^.{8,15}$/.test(password)){
+        errorList.push("The password must be between 8 to 15 characters long.");}
+    this.passwordErrors = errorList;
+    if (this.passwordErrors.length === 0) {
+        console.log("Valid password");
+        this.$router.push('/');
+    }
   }
+}
 }
 </script>
 
