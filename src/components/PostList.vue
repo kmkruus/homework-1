@@ -33,8 +33,8 @@
     Otherwise, it will the class "clicked", which will remove the text-decoration 
     This is a ternary operator, you should remember how it works" 
     -->
-    <div class="task-box" @click="task.done = !task.done" :class="task.done? 'clicked' : ''">{{ task.desc }}</div>
-    <div class="delete" @click="deleteTask(index)">Delete</div>
+    <div class="task-box">{{ task.desc }}</div>
+    <div class="like" @click="task.likes = task.likes + 1">Like {{ task.likes }}</div>
     </div> 
     
 </div>
@@ -49,10 +49,10 @@ name: "PostList",
 data: function() {
 return {
     tasks: [ 
-      {desc: "Register my team in Moodle", done: true},
-      {desc: "Finish the homework", done: false},
-      {desc: "Submit the homework though Moodle" , done: false},
-      {desc: "Discuss the homework in Lab" , done: false},
+      {desc: "Register my team in Moodle", likes: 1},
+      {desc: "Finish the homework", likes: 1},
+      {desc: "Submit the homework though Moodle" , likes: 1},
+      {desc: "Discuss the homework in Lab" , likes: 1},
         ],
     taskDesc: "",
   }},
@@ -67,10 +67,6 @@ methods: {
       this.tasks.push({desc: this.taskDesc, done: false });
     /* to empty the input after adding the task in the input filed to the list (array) of the to do list */
       this.taskDesc = "";
-    },
-    /* You sould know what array.splice(index, 1) do */
-    deleteTask: function(index) {
-      this.tasks.splice(index, 1);
     },
     /* Empty the list (array) of the to do list  */
     deleteAll: function() {
@@ -166,7 +162,7 @@ h1{
   cursor: pointer;
   float: left;
 }
-.main .tasks-list .delete {
+.main .tasks-list .like {
   float: right;
   width: 80px;
   background-color: #cc372c;
@@ -179,7 +175,7 @@ h1{
   border-radius: 20px;
 }
 
-.main .tasks-list .delete:hover {
+.main .tasks-list .like:hover {
     background-color: #6e1812;
 }
 
