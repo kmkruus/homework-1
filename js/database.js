@@ -26,7 +26,8 @@ const createTblQuery = `
 	    "id" SERIAL PRIMARY KEY,         
 	    "body" VARCHAR(4000) NOT NULL,
         "imagelink" VARCHAR(200),
-        "likecount"  INTEGER NOT NULL
+        "likecount"  INTEGER NOT NULL,
+        "created_at" DATE DEFAULT CURRENT_DATE
     );`;
 
 const createAnotherTbl = `
