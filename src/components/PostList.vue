@@ -5,7 +5,7 @@
 
     <!-- User PFP -->
     <div class="push">
-      <img src="../../images/icon.png" alt="pfp">
+      <img src="@/images/icon.png" alt="pfp">
     </div>
 
     <!-- Date -->
@@ -13,7 +13,7 @@
 
     <!-- Optional Image -->
     <div v-if="post.image">
-      <img :src="'../../images/' + post.image" alt="postAttachment">
+      <img :src="'@/images/' + post.image" alt="postAttachment">
     </div>
 
     <!-- Text -->
@@ -21,7 +21,7 @@
 
     <!-- Like Button -->
     <div class="push like" @click="post.likes++">
-      <img src="../../images/thumbsup.png" alt="likeButton">
+      <img src="@/images/thumbsup.png" alt="likeButton">
       <span>{{ post.likes }}</span>
     </div>
     </div> 

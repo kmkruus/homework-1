@@ -1,17 +1,38 @@
 <template>
   <div class="home">
-    <to-do-list/>
+    <Header/>
+    <br></br>
+    <br></br>
+    <br></br>
+    <Logout/>
+    <PostList/>
+    <addDelete/>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <Footer/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import ToDoList from "@/components/ToDoList.vue";   
+import Header from "@/components/header.vue";  
+import Logout from "@/components/logoutButton.vue";  
+import PostList from "@/components/PostList.vue"; 
+import Footer from "@/components/footer.vue";    
+import addDelete from "@/components/addDeleteButtons.vue";  
 
 export default {
   name: "HomeView",
   components: {
-    ToDoList
+    Header,
+    PostList,
+    Footer,
+    Logout,
+    addDelete
   },
 };
 </script>
