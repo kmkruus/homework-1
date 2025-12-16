@@ -32,19 +32,19 @@ const createTblQuery = `
 const createAnotherTbl = `
     CREATE TABLE IF NOT EXISTS "users" (
 	    "id" SERIAL PRIMARY KEY,         
-	    "username" VARCHAR(100),
-        "password" VARCHAR(100),
+	    "email" VARCHAR(100) UNIQUE NOT NULL,
+        "password" VARCHAR(100) NOT NULL
     );`;
 
 execute(createTblQuery).then(result => {
     if (result) {
-        console.log('If does not exists, create the "posts" table');
+        console.log('If it does not exist, create the "posts" table');
     }
 });
 
 execute(createAnotherTbl).then(result => {
     if (result) {
-        console.log('If does not exists, create the "users" table');
+        console.log('If it does not exist, create the "users" table');
     }
 });
 

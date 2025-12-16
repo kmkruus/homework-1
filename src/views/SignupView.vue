@@ -2,7 +2,7 @@
   <div class="login">
     <Header/>
     <div id = vahe></div>
-  <form @submit.prevent ="validateForm">
+  <form @submit.prevent ="submitForm">
   <h2>Create an account</h2>
   <label for="email">Email</label>
   <input type="email" required v-model="email">
@@ -16,7 +16,7 @@
 
 
 <div class="submit">
-    <button>Sign up </button>
+    <button>Sign Up</button>
 </div>
 </form>
     <Footer/>
@@ -64,11 +64,34 @@ data: function() {
     if(!/^.{8,15}$/.test(password)){
         errorList.push("The password must be between 8 to 15 characters long.");}
     this.passwordErrors = errorList;
-    if (this.passwordErrors.length === 0) {
+  },
+   async submitForm() {
+      this.validateForm();
+
+      if (this.passwordErrors.length === 0) {
         console.log("Valid password");
-        this.$router.push('/');
-    }
-  }
+        try {
+          const response = await fetch('http://localhost:8081/api/signup', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              email: this.email,
+              password: this.password
+            })
+          });
+
+          const data = await response.json();
+          console.log(data);
+
+          if (data.success) {
+            this.$router.push('/login');
+          }
+        } catch (err) {
+          console.error(err.message);
+        }
+      }}
 }
 }
 </script>

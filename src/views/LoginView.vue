@@ -2,8 +2,8 @@
   <div class="login">
     <Header/>
     <div id = vahe></div>
-  <form @submit.prevent ="validateForm">
-  <h2>Create an account</h2>
+  <form @submit.prevent ="submitForm">
+  <h2>Log In</h2>
   <label for="email">Email</label>
   <input type="email" required v-model="email">
   <label for="password">Password</label>
@@ -16,8 +16,14 @@
 
 
 <div class="submit">
-    <button>Sign up </button>
+    <button>Login</button>
 </div>
+    <div class="signup">
+      <router-link to="/signup">
+        <button type="button">Sign up</button>
+      </router-link>
+    </div>
+
 </form>
     <Footer/>
   </div>
@@ -63,14 +69,37 @@ data: function() {
         errorList.push("The password must contain at least one instance of the character _");}
     if(!/^.{8,15}$/.test(password)){
         errorList.push("The password must be between 8 to 15 characters long.");}
-    this.passwordErrors = errorList;
-    if (this.passwordErrors.length === 0) {
+    this.passwordErrors = errorList;},
+    async submitForm() {
+      this.validateForm();
+
+      if (this.passwordErrors.length === 0) {
         console.log("Valid password");
-        this.$router.push('/');
-    }
-  }
+        try {
+          const response = await fetch('http://localhost:8081/api/login', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              email: this.email,
+              password: this.password
+            })
+          });
+
+          const data = await response.json();
+          console.log(data);
+
+          if (data.success) {
+            this.$router.push('/');
+          }
+        } catch (err) {
+          console.error(err.message);
+        }
+  }}
 }
 }
+
 </script>
 
 <style scoped>
@@ -117,7 +146,7 @@ margin-top:  20px;
 color: rgb(235, 235, 250);
 border-radius: 20px;
 }
-h2, .submit{
+h2, .submit, .signup{
     text-align: center;
 }
 .error{
