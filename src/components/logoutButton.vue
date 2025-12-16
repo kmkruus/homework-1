@@ -1,5 +1,7 @@
 <template>
-    <button type="button">Logout</button>
+    <router-link to="/login">
+        <button type="button">Logout</button>
+    </router-link>
 </template>
 
 

@@ -1,5 +1,7 @@
 <template>
-    <button type="button">Add Post</button>
+    <router-link to="/addpost">
+        <button type="button">Add Post</button>
+    </router-link>
     <button type="button">Delete all</button>
 </template>
 
